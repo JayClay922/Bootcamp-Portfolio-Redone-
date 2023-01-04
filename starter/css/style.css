@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  margin: 5px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(135, 148, 148);
+  border-radius: 15px;
+  color: black;
+}
+
+.header h1 {
+  font-size: 70px;
+  color: white;
+}
+
+.header nav ul {
+  list-style: none;
+}
+.header nav ul li {
+  display: inline-block;
+  padding:  0px 20px;
+  font-size: 20px;
+  color: white;
+}
+
+a[href$=".css"] {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+  height: 80px;
+  background-image: url(../images/wooden-boards.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+#flex-container {
+  display: inline-block;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  color: rgb(59, 22, 8);
+}
+
+.about-me {
+  display: grid;
+  width: fit-content;
+  margin: 0.2%;
+  border-radius: 15px;
+  background-color: rgb(135, 148, 148);
+  color: white;
+  grid-template-rows: 25% 90%;
+  grid-template-columns: 3fr 3fr 1fr;
+  grid-template-areas:
+  "about-me-h2 about-me-h2 about-me-img"
+  "about-me-p about-me-p about-me-img";
+}
+
+#about-me-h2 {
+  grid-area: about-me-h2;
+  align-items: center;
+  padding-left: 0.5%;
+  font-size: 30px;
+  text-decoration: underline;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#about-me-p {
+  grid-area: about-me-p;
+  font-size: 15.5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 0.5%;
+}
+
+#about-me-img {
+  grid-area: about-me-img;
+  height: 150px;
+  width: 150px;
+  padding: 3%;
+}
+
+#workHeading {
+  font-size: 24px;
+  text-decoration: underline;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-right: 16px;
+}
+
+.contactHeading {
+  font-size: 24px;
+  text-decoration: underline;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-right: 16px;
+}
+
+
+#workGrid {
+  display: grid;
+  height: 60vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "horiseon-marketing horiseon-marketing portfolio-red portfolio-red"
+  "horiseon-marketing horiseon-marketing portfolio-laptop portfolio-laptop"
+  "portfolio-sea portfolio-sea portfolio-bluepink portfolio-bluepink";
+}
+
+
+.workGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5px;
+  border: 10px solid rgb(135, 148, 148);
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+.workGridArea:hover {
+  filter: grayscale(100%);
+}
+
+.workSubheading {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 5px solid black;
+}
+
+#horiseon-marketing {
+  grid-area: horiseon-marketing;
+  background-image: url(../images/digital-marketing-meeting.jpg);
+  transition: all 0.5s ease-in-out;
+}
+
+a[href^="https"] {
+  color: white;
+}
+
+a[href^="#"] {
+  color:white;
+}
+
+#portfolio-red {
+  grid-area: portfolio-red;
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+#portfolio-laptop {
+  grid-area: portfolio-laptop;
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+#portfolio-sea {
+  grid-area: portfolio-sea;
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+#portfolio-bluepink {
+  grid-area: portfolio-bluepink;
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  justify-content: space-between;
+  background-color: rgb(135, 148, 148);
+  padding: 20px 40px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.contact-info {
+  font-size: 17.5px;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    display: block;
+  }
+
+  #about-me-img {
+    height: 250px;
+    width: 200px;
+    margin-top: 10px;
+  }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: block;
+  }
+
+  #flex-container {
+    margin-top: 20px;
+  }
+
+  #about-me-p {
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+
+  .about-me {
+    grid-template-rows: 15% 90%;
+  }
+
+  #workGrid {
+    grid-template-rows: 30% 20% 20% 20% 12%;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "horiseon-marketing"
+    "portfolio-red"
+    "portfolio-laptop"
+    "portfolio-sea"
+    "portfolio-bluepink";
+  }
+
+  .workGridArea {
+    margin: 5px;
+  }
+
+
+
+  .footer {
+    margin-top: 0px;
+    justify-content: space-evenly;
+    font-size: 10px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
